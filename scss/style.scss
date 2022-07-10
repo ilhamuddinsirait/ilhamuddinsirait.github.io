@@ -149,7 +149,7 @@ header{
 
 footer{
     color: #363636;
-    margin: 30px 0;
+    margin-top: 20px;
     text-align: center;
     a{
         color: #ff9900;
@@ -159,8 +159,14 @@ footer{
         color: #ff2200;
         margin: 0 5px;
     }
+    .hits{
+        margin-top: 10px;
+    }
 }
 .socmed{
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 2px solid #fff;
     ul{
         display: inline;
         li{
@@ -172,6 +178,28 @@ footer{
                     color: #363636;
                 }
             }
+        }
+    }
+}
+
+.share{
+    ul{
+        li{
+            display: inline-block;
+            font-size: 35px;
+            margin: 0 10px;
+
+        }
+    }
+    .fa-facebook{
+        color:#1877f2 ;
+    }
+    .fa-twitter{
+        color: #1da1f2;
+    }
+    i{
+        &:hover{
+            color: #757575;
         }
     }
 }

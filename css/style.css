@@ -178,7 +178,7 @@ header .menu ul li i {
 
 footer {
   color: #363636;
-  margin: 30px 0;
+  margin-top: 20px;
   text-align: center;
 }
 
@@ -189,6 +189,16 @@ footer a {
 footer .fa-heart {
   color: #ff2200;
   margin: 0 5px;
+}
+
+footer .hits {
+  margin-top: 10px;
+}
+
+.socmed {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 2px solid #fff;
 }
 
 .socmed ul {
@@ -203,6 +213,24 @@ footer .fa-heart {
 
 .socmed ul li a:hover {
   color: #363636;
+}
+
+.share ul li {
+  display: inline-block;
+  font-size: 35px;
+  margin: 0 10px;
+}
+
+.share .fa-facebook {
+  color: #1877f2;
+}
+
+.share .fa-twitter {
+  color: #1da1f2;
+}
+
+.share i:hover {
+  color: #757575;
 }
 
 @media only screen and (max-width: 600px) {
