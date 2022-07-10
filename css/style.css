@@ -129,7 +129,7 @@ header .menu ul li i {
   height: auto;
   color: #363636;
   text-align: left;
-  padding-left: 10px;
+  padding: 0 20px;
 }
 
 .isi-blog a {
@@ -140,6 +140,40 @@ header .menu ul li i {
 .isi-blog p {
   font-size: 16px;
   margin: 10px 0;
+}
+
+.isi-blog ul {
+  padding-left: 10px;
+}
+
+.isi-blog ul li {
+  margin-left: 25px;
+  list-style: square;
+}
+
+.isi-blog iframe {
+  margin-top: 20px;
+  width: 100%;
+  height: auto;
+  min-height: 400px;
+}
+
+.isi-blog button {
+  width: 200px;
+  height: 50px;
+  font-family: inherit;
+  font-weight: 700;
+  background-color: #ff2200;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.isi-blog button:hover {
+  background-color: #363636;
 }
 
 footer {
