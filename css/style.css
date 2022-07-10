@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  color: #fff;
+  background-color: #757575;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 900;
+  margin: 20px 0;
+  padding: 10px 0;
+  text-transform: uppercase;
+  border-bottom: 2px solid #fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  display: list-item;
+  list-style: square;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.fd-col {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main {
+  width: 1024px;
+  height: auto;
+  padding: 10px;
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+header {
+  width: 98%;
+  height: 70px;
+  background-color: #363636;
+}
+
+header .logo {
+  width: 50%;
+  height: 50px;
+  line-height: 50px;
+  text-align: left;
+  padding-left: 20px;
+}
+
+header .logo a {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+header .logo a span {
+  color: #ff9900;
+}
+
+header .menu {
+  width: 50%;
+  height: 50px;
+  text-align: right;
+  padding-right: 20px;
+}
+
+header .menu ul {
+  height: inherit;
+  line-height: 50px;
+}
+
+header .menu ul li {
+  font-size: 25px;
+}
+
+header .menu ul li i {
+  color: #ff2200;
+}
+
+.judul-blog {
+  width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
+
+.judul-blog h1 {
+  font-size: 35px;
+  color: #363636;
+  font-weight: 900;
+}
+
+.isi-blog {
+  width: 100%;
+  height: auto;
+  color: #363636;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.isi-blog a {
+  font-weight: bold;
+  color: #ff2200;
+}
+
+.isi-blog p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+footer {
+  color: #363636;
+  margin: 30px 0;
+  text-align: center;
+}
+
+footer a {
+  color: #ff9900;
+}
+
+footer .fa-heart {
+  color: #ff2200;
+  margin: 0 5px;
+}
+
+.socmed ul {
+  display: inline;
+}
+
+.socmed ul li {
+  display: inline-block;
+  font-size: 20px;
+  margin: 0 10px;
+}
+
+.socmed ul li a:hover {
+  color: #363636;
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    width: 98%;
+  }
+  header {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header .logo {
+    text-align: center;
+    width: 100%;
+    height: 30px;
+    padding-left: 10px;
+  }
+  header .logo a {
+    font-size: 25px;
+  }
+  header .menu {
+    text-align: center;
+    width: 100%;
+    padding-left: 10px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
