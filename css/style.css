@@ -132,6 +132,10 @@ header .menu ul li i {
   padding: 0 20px;
 }
 
+.isi-blog img {
+  margin: 20px 0;
+}
+
 .isi-blog a {
   font-weight: bold;
   color: #ff2200;
