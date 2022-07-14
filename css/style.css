@@ -10,7 +10,7 @@ body {
   font-family: 'Lato', sans-serif;
   font-size: 14px;
   color: #fff;
-  background-color: #757575;
+  background-color: #363636;
 }
 
 h3 {
@@ -85,11 +85,11 @@ header .logo {
 
 header .logo a {
   font-size: 25px;
-  font-weight: 700;
+  font-weight: 900;
 }
 
 header .logo a span {
-  color: #ff9900;
+  color: #ff2200;
 }
 
 header .menu {
@@ -119,9 +119,27 @@ header .menu ul li i {
 }
 
 .judul-blog h1 {
-  font-size: 35px;
+  font-size: 55px;
   color: #363636;
   font-weight: 900;
+}
+
+.judul-blog2 {
+  width: 98%;
+  height: auto;
+  background-color: #363636;
+  text-align-last: left;
+  padding: 5px 10px;
+  text-transform: capitalize;
+}
+
+.judul-blog2 h1 {
+  border-top: 1px solid #fff;
+  padding-top: 10px;
+}
+
+.judul-blog2 .fa-terminal {
+  color: #00ce5d;
 }
 
 .isi-blog {
@@ -240,6 +258,9 @@ footer .hits {
 @media only screen and (max-width: 600px) {
   main {
     width: 98%;
+  }
+  .judul-blog h1 {
+    font-size: 30px;
   }
   header {
     width: 100%;
