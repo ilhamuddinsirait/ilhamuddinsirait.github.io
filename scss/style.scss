@@ -1,316 +1,164 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700,900&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Lato:wght@400;700;900&display=swap');
+
+$bg-body: #16181b;
+$bg-card: #ffffff;
+$bg-card-subtle: #f8fafc;
+$bg-header: #1f2328;
+$bg-footer: #1a1d21;
+$text-main: #1e293b;
+$text-muted: #64748b;
+$primary: #ff2200;
+$primary-hover: #e01e00;
+$primary-light: rgba(255, 34, 0, 0.08);
+$accent-orange: #ff9900;
+$accent-green: #10b981;
+$border-color: #e2e8f0;
+$border-dark: rgba(255, 255, 255, 0.1);
+$radius-sm: 8px;
+$radius-md: 12px;
+$radius-lg: 16px;
+$radius-xl: 20px;
+$font-sans: 'Plus Jakarta Sans', 'Lato', sans-serif;
+$font-mono: 'JetBrains Mono', monospace;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    font-family: 'Lato', sans-serif;
-    font-size: 14px;
-    color: #fff;
-    background-color: #363636;
+body {
+  font-family: $font-sans;
+  font-size: 15px;
+  line-height: 1.6;
+  color: $text-main;
+  background-color: $bg-body;
+  background-image: radial-gradient(circle at 50% 0%, rgba(255, 59, 48, 0.08) 0%, rgba(22, 24, 27, 0) 70%);
+  background-attachment: fixed;
+  min-height: 100vh;
+  padding: 24px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
-h3{
-    font-size: 20px;
-    font-weight: 900;
-    margin: 20px 0;
-    padding: 10px 0;
-    text-transform: uppercase;
-    border-bottom: 2px solid #fff;
+
+.container {
+  width: 100%;
+  max-width: 1060px;
+  margin: 0 auto;
 }
-a{
+
+main {
+  width: 100%;
+  background-color: $bg-card;
+  border-radius: $radius-xl;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  width: 100%;
+  background: $bg-header;
+  border-bottom: 1px solid $border-dark;
+  padding: 16px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    a {
+      font-size: 22px;
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: -0.5px;
+      text-decoration: none;
+
+      span {
+        color: $primary;
+        text-shadow: 0 0 20px rgba(255, 34, 0, 0.25);
+      }
+    }
+  }
+
+  .menu {
+    ul {
+      display: flex;
+      align-items: center;
+      list-style: none;
+    }
+  }
+}
+
+.judul-blog {
+  padding: 40px 28px 24px 28px;
+  text-align: center;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  border-bottom: 1px solid $border-color;
+
+  h1 {
+    font-size: clamp(26px, 4vw, 38px);
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.25;
+
+    i {
+      color: $primary;
+      margin-right: 8px;
+    }
+  }
+}
+
+.isi-blog {
+  width: 100%;
+  padding: 24px 28px 40px 28px;
+  text-align: left;
+}
+
+footer {
+  background: $bg-footer;
+  color: #94a3b8;
+  padding: 28px 24px;
+  border-top: 1px solid $border-dark;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  h4 a {
+    color: #f1f5f9;
     text-decoration: none;
-    color: inherit;
+    &:hover { color: $primary; }
+  }
 
-}
-li{
-    
-    list-style: none;
-}
-p{
-    display: list-item;
-    list-style: square;
-}
-.container{
-    width: 100%;
-    height: auto;
-    min-height: 100vh;
-}
-
-.flex{
+  .socmed ul {
     display: flex;
     justify-content: center;
-    align-items: center;
-}
-.fd-col{
-    flex-direction: column;
-}
+    gap: 10px;
+    list-style: none;
 
-main{
-    width: 1024px;
-    height: auto;
-    padding: 10px;
-    background-color: #f1f1f1;
-    text-align: center;
-}
+    li a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+      color: #cbd5e1;
+      text-decoration: none;
+      transition: all 0.2s;
 
-header{
-    width: 100%;
-    height: 70px;
-    background-color: #363636;
-    // border-radius: 5px;
-    .logo{
-        width: 50%;
-        height: 50px;
-        line-height: 50px;
-        text-align: left;
-        padding-left: 20px;
-        a{
-            font-size: 25px;
-            font-weight: 900;
-            span{
-                color: #ff2200;
-                // text-shadow: 2px 2px 2px #fff;
-            }
-        }
-    }
-    .menu{
-        width: 50%;
-        height: 50px;
-        text-align: right;
-        padding-right: 20px ;
-        ul{
-            height: inherit;
-            line-height: 50px;
-            li{
-                font-size: 25px;
-                i{
-                    color: #ff2200;
-                }
-            }
-        }
-    }
-}
-
-.judul-blog{
-    width: 100%;
-    height: auto;
-    margin: 20px 0;
-    h1{
-        font-size: 55px;
-        color: #363636;
-        font-weight: 900;
-    }
-}
-
-.judul-blog2{
-    width: 100%;
-    height: auto;
-    background-color: #363636;
-    text-align-last: left;
-    padding: 5px 10px;
-    // margin-top: 20px;
-    text-transform: capitalize;
-    h1{
-        border-top: 1px solid #fff;
-        padding-top: 10px;
-    }
-    .fa-terminal{
-        color: #00ce5d;
-
-    }
-}
-
-.generator{
-    width: 100%;
-    height: auto;
-    min-height: 400px;
-    padding: 5px;
-    background-color: #cecece;
-    border-radius:0 0 5px 5px;
-    display: flex;
-}
-.set{
-    width: 40%;
-    height: auto;
-    min-height: inherit;
-    border-radius: 5px 0 0 5px;
-    padding: 10px;
-    position: relative;
-    border-right: 1px solid #333;
-    
-}
-.btnset{
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    button{
-        width: 40%;
-        height: 35px;
-        background-color: #ff2200;
-        border: none;
-        border-radius: 3px;
-        font-family: 'Lato' , sans-serif;
-        font-weight: bold;
-        font-size: 15px;
+      &:hover {
+        background: $primary;
         color: #fff;
-        margin: 5px;
-        cursor: pointer;
-        transition: .2s ease-in;
-        &:hover{
-            background-color: #ff2200c5;
-        }
+      }
     }
-}
-.res{
-    width: 60%;
-    height: auto;
-    min-height: inherit;
-    border-radius: 0 5px 5px 0;
-    background-color: #fff;
-}
-
-.isi-blog{
-    width: 100%;
-    height: auto;
-    color: #363636;
-    text-align: left;
-    padding: 0 20px;
-    img{
-        margin: 20px 0;
-        width: 100%;
-    }
-    a{
-        font-weight: bold;
-        color: #ff2200;
-    }
-    p{
-        font-size: 16px;
-        margin: 10px 0;
-    }
-    ul{
-        padding-left: 10px;
-        li{
-            margin-left: 25px;
-            list-style: square;
-        }
-    }
-    iframe{
-        margin-top: 20px;
-        width: 100%;
-        height: auto;
-        min-height: 400px;
-    }
-    button{
-        width: 200px;
-        height: 50px;
-        font-family: inherit;
-        font-weight: 700;
-        background-color: #ff2200;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: .2s ease-in-out;
-        &:hover{
-            background-color: #363636;
-        }
-    }
-}
-
-
-
-footer{
-    color: #363636;
-    margin-top: 20px;
-    text-align: center;
-    a{
-        color: #ff9900;
-        
-    }
-    .fa-heart{
-        color: #ff2200;
-        margin: 0 5px;
-    }
-    .hits{
-        margin-top: 10px;
-    }
-}
-.socmed{
-    margin-top: 10px;
-    padding-top: 10px;
-    border-top: 2px solid #fff;
-    ul{
-        display: inline;
-        li{
-            display: inline-block;
-            font-size: 20px;
-            margin: 0 10px;
-            a{
-                &:hover{
-                    color: #363636;
-                }
-            }
-        }
-    }
-}
-
-.share{
-    ul{
-        li{
-            display: inline-block;
-            font-size: 35px;
-            margin: 0 10px;
-
-        }
-    }
-    .fa-facebook{
-        color:#1877f2 ;
-    }
-    .fa-twitter{
-        color: #1da1f2;
-    }
-    i{
-        &:hover{
-            color: #757575;
-        }
-    }
-}
-@media only screen and (max-width: 600px){
-    main{
-        width: 98%;
-    }
-    .judul-blog{
-        h1{
-            font-size: 30px;
-        }
-    }
-    header{
-        width: 100%;
-        flex-direction: column;
-        .logo{
-            text-align: center;
-            width: 100%;
-            height: 30px;
-            padding-left: 10px;
-            a{
-                font-size: 25px;
-            }
-        }
-        .menu{
-            text-align: center;
-            width: 100%;
-            padding-left: 10px;
-        }
-    }
-    .generator{
-        flex-direction: column;
-        .set,.res{
-            width: 100%;
-            border-radius: unset;
-        }
-    }
-
+  }
 }

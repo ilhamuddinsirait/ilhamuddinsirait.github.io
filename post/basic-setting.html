@@ -1,107 +1,378 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://ilhamuddinsirait.github.io/img/favicon.ico" type="image/x-icon">
-    <title>Free Hotspot Template for Mikrotik - by Ilhamuddin Sirait Tutorial</title>
-    <meta content='Free Hotspot Template for Mikrotik, The best site to download login page template for your Hotspot Mikrotik ! By IlhamuddinSirait.github.io' name='description'/>
-    <meta content='template hotspot, template free, free template hotspot, login page hotspot, free login page, template premium, login page premium' name='keywords'/>
-    <meta content='index, follow, noodp' name='robots'/>
-    <link rel="alternate" href= "https://ilhamuddinsirait.github.io/" hreflang="en-us" />
+    <title>Generator Tools for Basic MikroTik Setting - by Ilhamuddin Sirait Tutorial</title>
+    <meta
+        content='Generator Tools for Basic MikroTik Setting, The best site to download login page template for your Hotspot Mikrotik ! By IlhamuddinSirait.github.io'
+        name='description' />
+    <meta
+        content='generator mikrotik, setting dasar mikrotik, script routeros, template hotspot, login page mikrotik'
+        name='keywords' />
+    <meta content='index, follow, noodp' name='robots' />
+    <link rel="alternate" href="https://ilhamuddinsirait.github.io/" hreflang="en-us" />
 
-    <meta property="og:title" content="Free Hotspot Template for Mikrotik - by Ilhamuddin Sirait Tutorial">
-    <meta property="og:description" content="Free Hotspot Template for Mikrotik - by Ilhamuddin Sirait Tutorial">
-    <meta property="og:url" content="https://ilhamuddinsirait.github.io/">
+    <meta property="og:title" content="Generator Tools for Basic MikroTik Setting - by Ilhamuddin Sirait Tutorial">
+    <meta property="og:description" content="Generator Tools for Basic MikroTik Setting - by Ilhamuddin Sirait Tutorial">
+    <meta property="og:url" content="https://ilhamuddinsirait.github.io/post/basic-setting.html">
     <meta property="og:image" content="https://ilhamuddinsirait.github.io/img/Free-Hotspot-Template-for-Mikrotik.png">
-    <meta property="og:image:alt" content="Free Hotspot Template for Mikrotik - by Ilhamuddin Sirait Tutorial">
     <meta property="og:type" content="website">
-
-    <!-- Site Verification -->
-    <meta name="google-site-verification" content="lp-Iw25CJo1hnZgtrlLLDSqyKyj80N28wp-x7P-FSuM" />
-    <meta name="msvalidate.01" content="E2E0955E43E7F4946387A65E3498496B" />
-    <meta name="yandex-verification" content="3956951a84537a22" />
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ilhamuddinsirait.github.io/">
-    <meta property="og:title" content="Free Hotspot Template for Mikrotik - by Ilhamuddin Sirait Tutorial">
-    <meta property="og:description" content="Free Hotspot Template for Mikrotik, The best site to download login page template for your Hotspot Mikrotik ! By IlhamuddinSirait.github.io">
-    <meta property="og:image" content="https://ilhamuddinsirait.github.io/img/Free-Hotspot-Template-for-Mikrotik.png">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://ilhamuddinsirait.github.io/">
-    <meta property="twitter:title" content="Free Hotspot Template for Mikrotik - by Ilhamuddin Sirait Tutorial">
-    <meta property="twitter:description" content="Free Hotspot Template for Mikrotik, The best site to download login page template for your Hotspot Mikrotik ! By IlhamuddinSirait.github.io">
-    <meta property="twitter:image" content="https://ilhamuddinsirait.github.io/img/Free-Hotspot-Template-for-Mikrotik.png">
 
     <!-- Style -->
-    <meta property="og:url" content="https://ilhamuddinsirait.github.io">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .terminal-window {
+            background: #0f172a;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid #334155;
+            box-shadow: var(--shadow-lg);
+            margin-top: 14px;
+        }
+
+        .terminal-header {
+            background: #1e293b;
+            padding: 10px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #334155;
+        }
+
+        .terminal-dots {
+            display: flex;
+            gap: 6px;
+        }
+
+        .terminal-dot {
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+        }
+
+        .dot-red { background: #ef4444; }
+        .dot-yellow { background: #f59e0b; }
+        .dot-green { background: #10b981; }
+
+        .terminal-title {
+            font-family: var(--font-mono);
+            font-size: 12px;
+            color: #94a3b8;
+            font-weight: 600;
+        }
+
+        .terminal-body {
+            padding: 20px;
+            font-family: var(--font-mono);
+            font-size: 13px;
+            color: #38bdf8;
+            background: #0b1120;
+            min-height: 260px;
+            max-height: 400px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            line-height: 1.6;
+        }
+
+        .terminal-body .cmd-comment { color: #64748b; }
+        .terminal-body .cmd-keyword { color: #a855f7; font-weight: bold; }
+        .terminal-body .cmd-param { color: #f59e0b; }
+        .terminal-body .cmd-val { color: #10b981; }
+
+        .generator-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin: 20px 0;
+        }
+
+        @media (max-width: 800px) {
+            .generator-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .form-card {
+            background: var(--bg-card-subtle);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .btn-terminal {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 10px 18px;
+            font-family: inherit;
+            font-size: 13.5px;
+            font-weight: 700;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            border: none;
+            transition: var(--transition);
+        }
+
+        .btn-terminal.primary {
+            background: var(--primary);
+            color: #ffffff;
+        }
+
+        .btn-terminal.primary:hover {
+            background: var(--primary-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-terminal.secondary {
+            background: #e2e8f0;
+            color: #334155;
+        }
+
+        .btn-terminal.secondary:hover {
+            background: #cbd5e1;
+        }
+    </style>
 </head>
+
 <body>
-    <div class="container flex">
-        <main class="flex fd-col">
-            <header class="flex">
-                <div class="logo">
-                    <a href="https://ilhamuddinsirait.github.io"><span>ilhamuddinsirait</span>.github.io</a>
+    <div class="container">
+        <main>
+            <!-- Header -->
+            <header>
+                <div class="nav-back-wrap">
+                    <a href="../index.html" class="nav-back-link" title="Kembali ke Beranda">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        <span>Beranda</span>
+                    </a>
+                    <div class="logo">
+                        <a href="https://ilhamuddinsirait.github.io">
+                            <i class="fa-solid fa-server" style="color: #ff2200;"></i>
+                            <span>ilhamuddinsirait</span>.github.io
+                        </a>
+                    </div>
                 </div>
                 <div class="menu">
                     <ul>
-                        <li>Subscribe <a target="_blank" href="https://www.youtube.com/ilhamuddinsiraittutorial"><i class=" fab fa-youtube"></i></a></li>
+                        <li>
+                            <a class="btn-subscribe" target="_blank" href="https://www.youtube.com/ilhamuddinsiraittutorial" title="Subscribe YouTube">
+                                <i class="fa-brands fa-youtube"></i>
+                                <span>Subscribe</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </header>
-            <div class="judul-blog2">
-                <h1><i class="fa-solid fa-terminal"></i> generator tools for basic <i>mikrotik</i> setting.</h1>
+
+            <!-- Hero Section -->
+            <div class="judul-blog">
+                <div class="hero-tag">
+                    <i class="fa-solid fa-terminal"></i> RouterOS CLI Generator
+                </div>
+                <h1><i class="fa-solid fa-terminal" style="color: #10b981;"></i> Generator Tools for Basic MikroTik Setting</h1>
+                <p class="hero-description">
+                    Alat bantu cepat untuk menghasilkan skrip konfigurasi dasar MikroTik RouterOS (IP Address, Gateway, DNS, dan NAT Masquerade) siap salin ke Terminal RouterOS.
+                </p>
             </div>
-            <div class="generator">
-                <div class="set">
-                    <div style="float:left; width:130px;">
-                        <label>IN ISP</label>
-                        <input type="text" id="wan1-isp" placeholder="Ex: ether1">
-                    </div>
-                    <div style="float:left; width:130px;">
-                        <label>IP ISP Router</label>
-                        <input type="text" id="wan1-isp" placeholder="Ex: 192.168.1.1">
-                    </div>
-                    <div style="float:left; width:130px;">
-                        <label>IP Address </label>
-                        <input type="text" id="wan1-isp" placeholder="Ex: ether1">
-                    </div>
-                    <div style="float:left; width:130px;">
-                        <label>IP ISP</label>
-                        <input type="text" id="wan1-isp" placeholder="Ex: 192.168.1.1">
+
+            <!-- Content Area -->
+            <div class="isi-blog">
+                <div class="generator-grid">
+                    <!-- Form Parameters -->
+                    <div class="form-card">
+                        <h4 style="font-size: 15px; font-weight: 800; color: #0f172a; text-transform: uppercase;">
+                            <i class="fa-solid fa-sliders" style="color: var(--primary); margin-right: 6px;"></i> Parameter Jaringan
+                        </h4>
+
+                        <div class="form-group-modern">
+                            <label for="wan-iface">Interface Internet (WAN):</label>
+                            <input type="text" id="wan-iface" value="ether1" placeholder="Ex: ether1">
+                        </div>
+
+                        <div class="form-group-modern">
+                            <label for="wan-ip">IP Address WAN (Router Anda):</label>
+                            <input type="text" id="wan-ip" value="192.168.1.100/24" placeholder="Ex: 192.168.1.100/24">
+                        </div>
+
+                        <div class="form-group-modern">
+                            <label for="isp-gateway">IP Gateway ISP (Modem):</label>
+                            <input type="text" id="isp-gateway" value="192.168.1.1" placeholder="Ex: 192.168.1.1">
+                        </div>
+
+                        <div class="form-group-modern">
+                            <label for="lan-iface">Interface Lokal (LAN):</label>
+                            <input type="text" id="lan-iface" value="ether2" placeholder="Ex: ether2">
+                        </div>
+
+                        <div class="form-group-modern">
+                            <label for="lan-ip">IP Address LAN (Local Network):</label>
+                            <input type="text" id="lan-ip" value="192.168.88.1/24" placeholder="Ex: 192.168.88.1/24">
+                        </div>
+
+                        <div class="form-group-modern">
+                            <label for="dns-server">DNS Servers:</label>
+                            <input type="text" id="dns-server" value="8.8.8.8, 1.1.1.1" placeholder="Ex: 8.8.8.8, 1.1.1.1">
+                        </div>
+
+                        <div class="btnset" style="margin-top: 10px;">
+                            <button id="btnGenerate" class="btn-terminal primary"><i class="fa-solid fa-play"></i> Generate Script</button>
+                            <button id="btnClear" class="btn-terminal secondary"><i class="fa-solid fa-rotate-left"></i> Reset</button>
+                        </div>
                     </div>
 
-                    <div class="btnset">
-                        <button>Generate</button>
-                        <button>Clear</button>
+                    <!-- Output Terminal Preview -->
+                    <div>
+                        <div class="terminal-window">
+                            <div class="terminal-header">
+                                <div class="terminal-dots">
+                                    <span class="terminal-dot dot-red"></span>
+                                    <span class="terminal-dot dot-yellow"></span>
+                                    <span class="terminal-dot dot-green"></span>
+                                </div>
+                                <span class="terminal-title">admin@MikroTik Terminal</span>
+                                <button id="btnCopyScript" class="filter-btn" style="padding: 3px 10px; font-size: 11px;">
+                                    <i class="fa-solid fa-copy"></i> Salin Script
+                                </button>
+                            </div>
+                            <pre id="terminalOutput" class="terminal-body"></pre>
+                        </div>
                     </div>
                 </div>
-                <div class="res"></div>
+
+                <!-- Share Box -->
+                <div class="share-section-box">
+                    <div class="share-title">
+                        <i class="fa-solid fa-share-nodes"></i>
+                        <span>Bagikan Laman Ini Kepada Teman & Komunitas</span>
+                    </div>
+                    <div class="share-buttons-group">
+                        <a class="btn-share-pill fb" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Filhamuddinsirait.github.io%2Fpost%2Fbasic-setting.html&amp;src=sdkpreparse">
+                            <i class="fa-brands fa-facebook"></i> Facebook
+                        </a>
+                        <a class="btn-share-pill tw" target="_blank" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Filhamuddinsirait.github.io%2Fpost%2Fbasic-setting.html&text=Generator%20Tools%20for%20Basic%20Mikrotik%20Setting">
+                            <i class="fa-brands fa-x-twitter"></i> Twitter/X
+                        </a>
+                        <a class="btn-share-pill wa" target="_blank" href="https://api.whatsapp.com/send?text=Generator%20Tools%20for%20Basic%20Mikrotik%20Setting%20https%3A%2F%2Filhamuddinsirait.github.io%2Fpost%2Fbasic-setting.html">
+                            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <button class="btn-share-pill copy" id="copyPageLink">
+                            <i class="fa-solid fa-link"></i> Salin Link
+                        </button>
+                    </div>
+                </div>
             </div>
+
+            <!-- Footer -->
             <footer>
-                <h4><i class="fa-regular fa-copyright"></i> Copyright 2022 <a href="https://www.facebook.com/i.sirait93">Ilhamuddin Sirait</a> - Design with <i class="fa-solid fa-heart"></i> By <a href="https://www.facebook.com/i.sirait93">isirait93</a></h4>
+                <h4>
+                    <i class="fa-regular fa-copyright"></i> Copyright 2022 - 2026 
+                    <a href="https://www.facebook.com/i.sirait93" target="_blank">Ilhamuddin Sirait</a> 
+                    &bull; Designed with <i class="fa-solid fa-heart"></i> By 
+                    <a href="https://www.facebook.com/i.sirait93" target="_blank">isirait93</a>
+                </h4>
                 <div class="hits">
-                    <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Filhamuddinsirait.github.io&count_bg=%23FF9900&title_bg=%23555555&icon=&icon_color=%23FF9900&title=hits&edge_flat=false"/></a>
+                    <a href="https://hits.seeyoufarm.com" target="_blank" rel="noopener">
+                        <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Filhamuddinsirait.github.io&count_bg=%23FF9900&title_bg=%23555555&icon=&icon_color=%23FF9900&title=hits&edge_flat=false" alt="Total Hits Visitor" />
+                    </a>
                 </div>
                 <div class="socmed">
                     <ul>
-                        <li><a target="_blank" href="https://www.facebook.com/i.sirait93"><i class="fa-brands fa-facebook"></i></a></li>
-                        <li><a target="_blank" href="https://www.instagram.com/i.sirait93"><i class="fa-brands fa-instagram"></i></a></li>
-                        <li><a target="_blank" href="https://www.youtube.com/ilhamuddinsiraittutorial"><i class="fa-brands fa-youtube"></i></a></li>
-                        <li><a target="_blank" href="https://www.tiktok.com/@ilhamsirait93"><i class="fa-brands fa-tiktok"></i></a></li>
-                        <li><a target="_blank" href="https://www.twitter.com/ilmansrtjr"><i class="fa-brands fa-twitter"></i></a></li>
-                        <li><a target="_blank" href=""><i class="fa-brands fa-github"></i></a></li>
+                        <li><a target="_blank" href="https://www.facebook.com/i.sirait93" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a target="_blank" href="https://www.instagram.com/i.sirait93" title="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a target="_blank" href="https://www.youtube.com/ilhamuddinsiraittutorial" title="YouTube"><i class="fa-brands fa-youtube"></i></a></li>
+                        <li><a target="_blank" href="https://www.tiktok.com/@ilhamsirait93" title="TikTok"><i class="fa-brands fa-tiktok"></i></a></li>
+                        <li><a target="_blank" href="https://www.twitter.com/ilmansrtjr" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                        <li><a target="_blank" href="https://github.com/ilhamuddinsirait" title="GitHub"><i class="fa-brands fa-github"></i></a></li>
                     </ul>
                 </div>
             </footer>
         </main>
-
     </div>
+
+    <!-- Toast message -->
+    <div id="copyToast" class="copy-toast">
+        <i class="fa-solid fa-circle-check" style="color: #10b981;"></i> Script berhasil disalin ke clipboard!
+    </div>
+
+    <script>
+        function generateScript() {
+            const wanIface = document.getElementById('wan-iface').value.trim() || 'ether1';
+            const wanIp = document.getElementById('wan-ip').value.trim() || '192.168.1.100/24';
+            const ispGateway = document.getElementById('isp-gateway').value.trim() || '192.168.1.1';
+            const lanIface = document.getElementById('lan-iface').value.trim() || 'ether2';
+            const lanIp = document.getElementById('lan-ip').value.trim() || '192.168.88.1/24';
+            const dnsServer = document.getElementById('dns-server').value.trim() || '8.8.8.8, 1.1.1.1';
+
+            const script = `# =========================================
+# MikroTik RouterOS Basic Setup Script
+# Created by Ilhamuddin Sirait Tutorial
+# Website: https://ilhamuddinsirait.github.io/
+# =========================================
+
+# 1. Setting IP Address WAN & LAN
+/ip address
+add address=${wanIp} interface=${wanIface} comment="IP-WAN-ISP"
+add address=${lanIp} interface=${lanIface} comment="IP-LAN-LOCAL"
+
+# 2. Setting Default Gateway ke Modem ISP
+/ip route
+add gateway=${ispGateway} comment="Default-Gateway-ISP"
+
+# 3. Setting DNS Server
+/ip dns
+set servers=${dnsServer} allow-remote-requests=yes
+
+# 4. Setting NAT Masquerade (Akses Internet Klien)
+/ip firewall nat
+add chain=srcnat out-interface=${wanIface} action=masquerade comment="NAT-Masquerade-Internet"
+
+# Selesai! Salin script ini dan paste di Terminal RouterOS Anda.`;
+
+            document.getElementById('terminalOutput').textContent = script;
+        }
+
+        document.getElementById('btnGenerate').addEventListener('click', generateScript);
+
+        document.getElementById('btnClear').addEventListener('click', function () {
+            document.getElementById('wan-iface').value = 'ether1';
+            document.getElementById('wan-ip').value = '192.168.1.100/24';
+            document.getElementById('isp-gateway').value = '192.168.1.1';
+            document.getElementById('lan-iface').value = 'ether2';
+            document.getElementById('lan-ip').value = '192.168.88.1/24';
+            document.getElementById('dns-server').value = '8.8.8.8, 1.1.1.1';
+            generateScript();
+        });
+
+        document.getElementById('btnCopyScript').addEventListener('click', function () {
+            const code = document.getElementById('terminalOutput').textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                const toast = document.getElementById('copyToast');
+                toast.innerHTML = '<i class="fa-solid fa-circle-check" style="color: #10b981;"></i> Script RouterOS disalin!';
+                toast.classList.add('show');
+                setTimeout(() => toast.classList.remove('show'), 2500);
+            });
+        });
+
+        document.getElementById('copyPageLink')?.addEventListener('click', function () {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                const toast = document.getElementById('copyToast');
+                toast.innerHTML = '<i class="fa-solid fa-circle-check" style="color: #10b981;"></i> Link berhasil disalin!';
+                toast.classList.add('show');
+                setTimeout(() => toast.classList.remove('show'), 2500);
+            });
+        });
+
+        // Initialize script on page load
+        generateScript();
+    </script>
 </body>
+
 </html>

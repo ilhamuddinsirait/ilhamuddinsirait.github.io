@@ -45,159 +45,691 @@
     <meta property="twitter:image"
         content="https://ilhamuddinsirait.github.io/img/Free-Hotspot-Template-for-Mikrotik.png">
 
-    <!-- Style -->
-    <meta property="og:url" content="https://ilhamuddinsirait.github.io">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <!-- Style & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div class="container flex">
-        <main class="flex fd-col">
-            <header class="flex">
+    <div class="container">
+        <main>
+            <!-- Header -->
+            <header>
                 <div class="logo">
-                    <a href="https://ilhamuddinsirait.github.io"><span>IlhamuddinSirait</span>.Github.io</a>
+                    <a href="https://ilhamuddinsirait.github.io" title="IlhamuddinSirait.Github.io">
+                        <i class="fa-solid fa-server" style="color: #ff2200;"></i>
+                        <span>IlhamuddinSirait</span>.Github.io
+                    </a>
+                    <span class="logo-badge">MikroTik Hub</span>
                 </div>
                 <div class="menu">
                     <ul>
-                        <li>Subscribe <a target="_blank" href="https://www.youtube.com/ilhamuddinsiraittutorial"><i
-                                    class=" fab fa-youtube"></i></a></li>
+                        <li>
+                            <a class="btn-subscribe" target="_blank" href="https://www.youtube.com/ilhamuddinsiraittutorial" title="Subscribe YouTube">
+                                <i class="fa-brands fa-youtube"></i>
+                                <span>Subscribe</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </header>
+
+            <!-- Hero Section -->
             <div class="judul-blog">
-                <h1><i class="fa-solid fa-network-wired"></i> Free Hotspot Template for <i>Mikrotik</i></h1>
+                <div class="hero-tag">
+                    <i class="fa-solid fa-bolt"></i> RouterOS Resources & Free Downloads
+                </div>
+                <h1><i class="fa-solid fa-network-wired"></i> Free Hotspot Template for <i class="text-italic">Mikrotik</i></h1>
+                <p class="hero-description">
+                    Koleksi template login page hotspot MikroTik terbaik, responsif, dan ringan. 100% gratis untuk jaringan RT/RW Net, sekolah, kantor, dan kafe Anda.
+                </p>
             </div>
+
+            <!-- Search & Filter Controls -->
+            <div class="search-filter-section">
+                <div class="search-box-wrap">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="searchInput" class="search-input" placeholder="Cari template, Winbox, atau software..." autocomplete="off">
+                    <button id="clearSearch" class="search-clear-btn" aria-label="Clear Search"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <div class="filter-pills">
+                    <button class="filter-btn active" data-filter="all">Semua Koleksi</button>
+                    <button class="filter-btn" data-filter="template">Hotspot Templates</button>
+                    <button class="filter-btn" data-filter="mikrotik-tools">MikroTik Tools</button>
+                    <button class="filter-btn" data-filter="editor">Text Editors</button>
+                    <button class="filter-btn" data-filter="ftp">FTP Tools</button>
+                </div>
+            </div>
+
+            <!-- Content Area -->
             <div class="isi-blog">
-                <h3><i class="fa-solid fa-satellite-dish"></i> Free Download Template Hotspot</h3>
-                <!-- Post -->
-                <p><a href="/post/terminal.html">Free Template Hotpsot Terminal Style</a> - You can find full details
-                    features in my youtube channel, you can use this template for free </p>
 
-                <p><a href="/post/simple-office.html">Simple Login Page Hotspot Template for Office</a> - This template
-                    is perfect for use in various locations, for example, in offices, schools and public places. </p>
+                <!-- Hotspot Templates Section -->
+                <div class="section-group" data-category="template">
+                    <div class="section-header">
+                        <div class="section-title">
+                            <span class="section-icon-badge"><i class="fa-solid fa-satellite-dish"></i></span>
+                            <span>Free Download Template Hotspot</span>
+                        </div>
+                        <span class="section-count-badge">9 Templates</span>
+                    </div>
 
-                <p><a href="/post/pubg-theme.html">Free Template Hotpsot Theme PUBG Mobile</a> - You can download this
-                    file, at the link provided at the bottom of the post, you can use this template for free </p>
+                    <div class="cards-grid">
+                        <!-- Terminal Style -->
+                        <div class="card-item" data-title="Free Template Hotspot Terminal Style linux cli dark theme">
+                            <div>
+                                <div class="card-top">
+                                    <div class="card-icon" style="color: #10b981;"><i class="fa-solid fa-terminal"></i></div>
+                                    <span class="card-badge badge-free">Free Download</span>
+                                </div>
+                                <a href="/post/terminal.html" class="card-title">Free Template Hotspot Terminal Style</a>
+                                <p class="card-desc">Tampilan retro terminal hacker Linux yang elegan, ringan, dan sangat responsif di perangkat mobile.</p>
+                                <div class="card-tags">
+                                    <span class="tag-chip">Responsive</span>
+                                    <span class="tag-chip">QR Code</span>
+                                    <span class="tag-chip">Voucher</span>
+                                </div>
+                            </div>
+                            <a href="/post/terminal.html" class="card-action">
+                                <span>Lihat Template & Demo</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
 
-                <p><a href="/post/berkah-full-color.html">Free Template Hotpsot Berkah Full Color</a> - You can find
-                    full details features in my youtube channel, you can use this template for free </p>
+                        <!-- Simple Office -->
+                        <div class="card-item" data-title="Simple Login Page Hotspot Template for Office kantor sekolah publik">
+                            <div>
+                                <div class="card-top">
+                                    <div class="card-icon" style="color: #0284c7;"><i class="fa-solid fa-building"></i></div>
+                                    <span class="card-badge badge-free">Free Download</span>
+                                </div>
+                                <a href="/post/simple-office.html" class="card-title">Simple Login Page Template for Office</a>
+                                <p class="card-desc">Sangat cocok untuk kantor, instansi sekolah, dan ruang publik dengan desain bersih dan formal.</p>
+                                <div class="card-tags">
+                                    <span class="tag-chip">Clean & Pro</span>
+                                    <span class="tag-chip">Member</span>
+                                    <span class="tag-chip">Mobile Friendly</span>
+                                </div>
+                            </div>
+                            <a href="/post/simple-office.html" class="card-action">
+                                <span>Lihat Template & Demo</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
 
-                <p><a href="/post/saweria.html">Free Template Hotpsot Saweria Theme</a> - You can find full details
-                    features in my youtube channel, you can use this template for free </p>
+                        <!-- PUBG Mobile -->
+                        <div class="card-item" data-title="Free Template Hotspot Theme PUBG Mobile game gaming">
+                            <div>
+                                <div class="card-top">
+                                    <div class="card-icon" style="color: #f59e0b;"><i class="fa-solid fa-gamepad"></i></div>
+                                    <span class="card-badge badge-featured">Popular</span>
+                                </div>
+                                <a href="/post/pubg-theme.html" class="card-title">Free Template Hotspot Theme PUBG Mobile</a>
+                                <p class="card-desc">Tema gaming PUBG yang keren dan menarik untuk warkop gamer, rental PS, dan spot gaming.</p>
+                                <div class="card-tags">
+                                    <span class="tag-chip">Gaming Theme</span>
+                                    <span class="tag-chip">Price List</span>
+                                    <span class="tag-chip">Voucher</span>
+                                </div>
+                            </div>
+                            <a href="/post/pubg-theme.html" class="card-action">
+                                <span>Lihat Template & Demo</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
 
-                <p><a href="/post/konoha.html">Free Template Hotpsot Konoha Ninja</a> - You can find full details
-                    features in my youtube channel, you can use this template for free </p>
+                        <!-- Berkah Full Color -->
+                        <div class="card-item" data-title="Free Template Hotspot Berkah Full Color warna warni lengkap fitur">
+                            <div>
+                                <div class="card-top">
+                                    <div class="card-icon" style="color: #ec4899;"><i class="fa-solid fa-palette"></i></div>
+                                    <span class="card-badge badge-free">Free Download</span>
+                                </div>
+                                <a href="/post/berkah-full-color.html" class="card-title">Free Template Hotspot Berkah Full Color</a>
+                                <p class="card-desc">Template ceria penuh warna dengan fitur komplit: Daftar harga, QR code, payment info, dan kontak.</p>
+                                <div class="card-tags">
+                                    <span class="tag-chip">Full Features</span>
+                                    <span class="tag-chip">Daftar Harga</span>
+                                    <span class="tag-chip">Payment</span>
+                                </div>
+                            </div>
+                            <a href="/post/berkah-full-color.html" class="card-action">
+                                <span>Lihat Template & Demo</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
 
-                <p><a href="/post/super.html">Super Lite Login Page Hotspot template</a> - You can find full details
-                    features in my youtube channel, you can use this template for free </p>
-                
-                <p><a href="/post/qatar.html">Qatar Worldcup Responsive Hotspot Template</a> - You can find full details
-                        features in my youtube channel, you can use this template for free </p>
-                <p><a href="/post/simple.html">Simple Lite Login Page Hotspot</a> - You can find full details features in my youtube channel, you can use this template for free </p>
+                        <!-- Saweria Theme -->
+                        <div class="card-item" data-title="Free Template Hotspot Saweria Theme donasi saweria">
+                            <div>
+                                <div class="card-top">
+                                    <div class="card-icon" style="color: #eab308;"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+                                    <span class="card-badge badge-free">Free Download</span>
+                                </div>
+                                <a href="/post/saweria.html" class="card-title">Free Template Hotspot Saweria Theme</a>
+                                <p class="card-desc">Desain khas nuansa platform Saweria yang modern, interaktif, dan mudah dimodifikasi.</p>
+                                <div class="card-tags">
+                                    <span class="tag-chip">Modern UI</span>
+                                    <span class="tag-chip">Voucher</span>
+                                    <span class="tag-chip">Responsive</span>
+                                </div>
+                            </div>
+                            <a href="/post/saweria.html" class="card-action">
+                                <span>Lihat Template & Demo</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
 
+                        <!-- Konoha Ninja -->
+                        <div class="card-item" data-title="Free Template Hotspot Konoha Ninja anime naruto">
+                            <div>
+                                <div class="card-top">
+                                    <div class="card-icon" style="color: #f97316;"><i class="fa-solid fa-leaf"></i></div>
+                                    <span class="card-badge badge-free">Free Download</span>
+                                </div>
+                                <a href="/post/konoha.html" class="card-title">Free Template Hotspot Konoha Ninja</a>
+                                <p class="card-desc">Sentuhan tema anime Konoha yang unik dan disukai anak muda untuk jaringan hotspot komunitas.</p>
+                                <div class="card-tags">
+                                    <span class="tag-chip">Anime Theme</span>
+                                    <span class="tag-chip">Lightweight</span>
+                                    <span class="tag-chip">Fast Load</span>
+                                </div>
+                            </div>
+                            <a href="/post/konoha.html" class="card-action">
+                                <span>Lihat Template & Demo</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
 
-                <!-- Tools -->
-                <h3><i class="fa-solid fa-screwdriver-wrench"></i> Software Tools for Mikrotik ( PC / MOBILE )</h3>
+                        <!-- Super Lite -->
+                        <div class="card-item" data-title="Super Lite Login Page Hotspot template ringan cepat">
+                            <div>
+                                <div class="card-top">
+                                    <div class="card-icon" style="color: #06b6d4;"><i class="fa-solid fa-feather"></i></div>
+                                    <span class="card-badge badge-free">Free Download</span>
+                                </div>
+                                <a href="/post/super.html" class="card-title">Super Lite Login Page Hotspot Template</a>
+                                <p class="card-desc">Ukuran file ultra ringan dan loading kilat. Cocok untuk routerboard berspesifikasi rendah.</p>
+                                <div class="card-tags">
+                                    <span class="tag-chip">Super Cepat</span>
+                                    <span class="tag-chip">Ultra Lite</span>
+                                    <span class="tag-chip">Zero Bloat</span>
+                                </div>
+                            </div>
+                            <a href="/post/super.html" class="card-action">
+                                <span>Lihat Template & Demo</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
 
-                <p><a target="_blank" href="https://mt.lv/winbox64">Winbox-64 (64bit)</a> - Winbox 64 bit is a small
-                    utility that allows administration of MikroTik RouterOS using a fast and simple GUI t is a native
-                    Win64 binary</p>
+                        <!-- Qatar World Cup -->
+                        <div class="card-item" data-title="Qatar Worldcup Responsive Hotspot Template bola world cup">
+                            <div>
+                                <div class="card-top">
+                                    <div class="card-icon" style="color: #8b5cf6;"><i class="fa-solid fa-futbol"></i></div>
+                                    <span class="card-badge badge-free">Free Download</span>
+                                </div>
+                                <a href="/post/qatar.html" class="card-title">Qatar Worldcup Responsive Hotspot Template</a>
+                                <p class="card-desc">Edisi olahraga sepak bola bertema World Cup yang dinamis, modern, dan sangat memikat mata.</p>
+                                <div class="card-tags">
+                                    <span class="tag-chip">Sport Theme</span>
+                                    <span class="tag-chip">Responsive</span>
+                                    <span class="tag-chip">Modern CSS</span>
+                                </div>
+                            </div>
+                            <a href="/post/qatar.html" class="card-action">
+                                <span>Lihat Template & Demo</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
 
-                <p><a target="_blank" href="https://mt.lv/winbox">Winbox-32 (32bit)</a> - Winbox 32 bit is a small
-                    utility that allows administration of MikroTik RouterOS using a fast and simple GUI t is a native
-                    Win32 binary</p>
+                        <!-- Simple Lite -->
+                        <div class="card-item" data-title="Simple Lite Login Page Hotspot minimalis simple">
+                            <div>
+                                <div class="card-top">
+                                    <div class="card-icon" style="color: #64748b;"><i class="fa-solid fa-shield-halved"></i></div>
+                                    <span class="card-badge badge-free">Free Download</span>
+                                </div>
+                                <a href="/post/simple.html" class="card-title">Simple Lite Login Page Hotspot</a>
+                                <p class="card-desc">Tampilan minimalis nan praktis yang menjamin proses autentikasi pelanggan berjalan cepat dan lancar.</p>
+                                <div class="card-tags">
+                                    <span class="tag-chip">Minimalist</span>
+                                    <span class="tag-chip">User Friendly</span>
+                                    <span class="tag-chip">Simple</span>
+                                </div>
+                            </div>
+                            <a href="/post/simple.html" class="card-action">
+                                <span>Lihat Template & Demo</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-                <p><a target="_blank" href="https://apps.apple.com/id/app/mikrotik/id1323064830?l=id">Mikrotik Winbox
-                        iPhone</a> - Use the MikroTik smartphone app on iPhone or IOS to configure your router in the
-                    field, or to apply the most basic initial settings for your MikroTik home access point.</p>
+                <!-- RouterOS Software Tools Section -->
+                <div class="section-group" data-category="mikrotik-tools">
+                    <div class="section-header">
+                        <div class="section-title">
+                            <span class="section-icon-badge"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+                            <span>Software Tools for Mikrotik ( PC / MOBILE )</span>
+                        </div>
+                        <span class="section-count-badge">5 Utilities</span>
+                    </div>
 
-                <p><a target="_blank"
-                        href="https://play.google.com/store/apps/details?id=com.mikrotik.android.tikapp&amp;hl=in">Mikrotik
-                        Winbox Android</a> - Use the MikroTik smartphone app on Android to configure your router in the
-                    field, or to apply the most basic initial settings for your MikroTik home access point.</p>
+                    <div class="cards-grid">
+                        <!-- RouterOS Script Generator -->
+                        <div class="card-item" data-title="Mikrotik Basic Setting Script Generator Online CLI routeros terminal tool">
+                            <div>
+                                <div class="card-top">
+                                    <div class="card-icon" style="color: #10b981;"><i class="fa-solid fa-terminal"></i></div>
+                                    <span class="card-badge badge-free">Online Tool</span>
+                                </div>
+                                <a href="/post/basic-setting.html" class="card-title">Basic RouterOS Script Generator</a>
+                                <p class="card-desc">Generator konfigurasi dasar MikroTik (IP Address, Gateway, DNS, Masquerade) siap copy-paste ke Terminal.</p>
+                                <div class="card-tags">
+                                    <span class="tag-chip">Online Tool</span>
+                                    <span class="tag-chip">RouterOS CLI</span>
+                                    <span class="tag-chip">Free</span>
+                                </div>
+                            </div>
+                            <a href="/post/basic-setting.html" class="card-action">
+                                <span>Buka Generator Tool</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
 
-                <!-- text editor -->
-                <h3><i class="fa-solid fa-screwdriver-wrench"></i> Software Text Editor ( PC / MOBILE )</h3>
+                        <!-- Winbox 64 -->
+                        <div class="card-item" data-title="Winbox-64 64bit mikrotik routeros windows">
+                            <div>
+                                <div class="card-top">
+                                    <div class="card-icon"><i class="fa-brands fa-windows"></i></div>
+                                    <span class="card-badge badge-tool">Win 64-bit</span>
+                                </div>
+                                <a target="_blank" href="https://mt.lv/winbox64" class="card-title">Winbox-64 (64bit)</a>
+                                <p class="card-desc">Utilitas resmi MikroTik untuk administrasi RouterOS menggunakan GUI cepat, simpel, dan stabil (Native Win64 binary).</p>
+                                <div class="card-tags">
+                                    <span class="tag-chip">Official MikroTik</span>
+                                    <span class="tag-chip">Portable</span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://mt.lv/winbox64" class="card-action">
+                                <span>Download Winbox 64</span>
+                                <i class="fa-solid fa-download"></i>
+                            </a>
+                        </div>
 
-                <p><a target="blank" href="https://download.sublimetext.com/sublime_text_build_4113_x64_setup.exe">
-                        Sublime Text </a>- is a sophisticated text editor for code, markup and prose. You'll love the
-                    slick user interface, extraordinary features and amazing</p>
+                        <!-- Winbox 32 -->
+                        <div class="card-item" data-title="Winbox-32 32bit mikrotik routeros windows x86">
+                            <div>
+                                <div class="card-top">
+                                    <div class="card-icon"><i class="fa-brands fa-windows"></i></div>
+                                    <span class="card-badge badge-tool">Win 32-bit</span>
+                                </div>
+                                <a target="_blank" href="https://mt.lv/winbox" class="card-title">Winbox-32 (32bit)</a>
+                                <p class="card-desc">Versi 32-bit untuk kompatibilitas penuh pada PC/laptop Windows model terdahulu.</p>
+                                <div class="card-tags">
+                                    <span class="tag-chip">Official MikroTik</span>
+                                    <span class="tag-chip">32-bit Legacy</span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://mt.lv/winbox" class="card-action">
+                                <span>Download Winbox 32</span>
+                                <i class="fa-solid fa-download"></i>
+                            </a>
+                        </div>
 
-                <p><a target="blank"
-                        href="https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.1.4/npp.8.1.4.Installer.exe">Notepad++
-                    </a>- is a free (as in “free speech” and also as in “free beer”) source code editor and Notepad
-                    replacement that supports several languages.</p>
+                        <!-- Mikrotik iPhone -->
+                        <div class="card-item" data-title="Mikrotik Winbox iPhone iOS apple smartphone routeros">
+                            <div>
+                                <div class="card-top">
+                                    <div class="card-icon"><i class="fa-brands fa-apple"></i></div>
+                                    <span class="card-badge badge-tool">iOS / Apple</span>
+                                </div>
+                                <a target="_blank" href="https://apps.apple.com/id/app/mikrotik/id1323064830?l=id" class="card-title">MikroTik App (iOS / iPhone)</a>
+                                <p class="card-desc">Konfigurasi dan pantau router MikroTik Anda langsung di lapangan lewat iPhone atau iPad secara praktis.</p>
+                                <div class="card-tags">
+                                    <span class="tag-chip">App Store</span>
+                                    <span class="tag-chip">Mobile Admin</span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://apps.apple.com/id/app/mikrotik/id1323064830?l=id" class="card-action">
+                                <span>Buka di App Store</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
 
-                <p><a target="blank" href="https://code.visualstudio.com/download">Microsoft Visual Studio Code </a>- is
-                    a code editor redefined and optimized for building and debugging modern web and cloud applications.
-                </p>
+                        <!-- Mikrotik Android -->
+                        <div class="card-item" data-title="Mikrotik Winbox Android google play smartphone routeros">
+                            <div>
+                                <div class="card-top">
+                                    <div class="card-icon"><i class="fa-brands fa-android"></i></div>
+                                    <span class="card-badge badge-tool">Android</span>
+                                </div>
+                                <a target="_blank" href="https://play.google.com/store/apps/details?id=com.mikrotik.android.tikapp&amp;hl=in" class="card-title">MikroTik App (Android)</a>
+                                <p class="card-desc">Aplikasi resmi di Android untuk setting awal access point rumahan dan monitoring traffic router di mana saja.</p>
+                                <div class="card-tags">
+                                    <span class="tag-chip">Google Play</span>
+                                    <span class="tag-chip">Mobile Config</span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.mikrotik.android.tikapp&amp;hl=in" class="card-action">
+                                <span>Buka di Play Store</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-                <p><a target="blank" href="https://play.google.com/store/apps/details?id=com.rhmsoft.code">Code Editor -
-                        Compiler & IDE ( Android ) </a>- Code editor is an optimized text editor focused on coding. It
-                    is a handy tool for development on Android. It contains necessary features for coding, includes
-                    syntax highlighting, auto indention, code assist, auto completion, compilation and execution, etc.
-                </p>
+                <!-- Text Editors Section -->
+                <div class="section-group" data-category="editor">
+                    <div class="section-header">
+                        <div class="section-title">
+                            <span class="section-icon-badge"><i class="fa-solid fa-code"></i></span>
+                            <span>Software Text Editor ( PC / MOBILE )</span>
+                        </div>
+                        <span class="section-count-badge">5 Editors</span>
+                    </div>
 
-                <p><a target="blank" href="https://apps.apple.com/us/app/code-editor-compiler-ide/id1581290510">Code
-                        Editor - Compiler & IDE ( Iphone ) </a>- Code editor is an optimized text editor focused on
-                    coding. It is a handy tool for development on Android. It contains necessary features for coding,
-                    includes syntax highlighting, auto indention, code assist, auto completion, compilation and
-                    execution, etc.</p>
+                    <div class="cards-grid">
+                        <!-- Sublime Text -->
+                        <div class="card-item" data-title="Sublime Text editor code markup html script">
+                            <div>
+                                <div class="card-top">
+                                    <div class="card-icon" style="color: #ff9900;"><i class="fa-solid fa-laptop-code"></i></div>
+                                    <span class="card-badge badge-tool">Windows</span>
+                                </div>
+                                <a target="_blank" href="https://download.sublimetext.com/sublime_text_build_4113_x64_setup.exe" class="card-title">Sublime Text</a>
+                                <p class="card-desc">Editor teks canggih dan sangat cepat untuk mengedit file HTML, CSS, dan skrip konfigurasi MikroTik.</p>
+                                <div class="card-tags">
+                                    <span class="tag-chip">Lightweight</span>
+                                    <span class="tag-chip">Fast Coding</span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://download.sublimetext.com/sublime_text_build_4113_x64_setup.exe" class="card-action">
+                                <span>Download Sublime Text</span>
+                                <i class="fa-solid fa-download"></i>
+                            </a>
+                        </div>
 
-                <!-- ftp tools -->
-                <h3><i class="fa-solid fa-screwdriver-wrench"></i> Software FTP Tools</h3>
+                        <!-- Notepad++ -->
+                        <div class="card-item" data-title="Notepad++ free source code editor windows">
+                            <div>
+                                <div class="card-top">
+                                    <div class="card-icon" style="color: #10b981;"><i class="fa-solid fa-note-sticky"></i></div>
+                                    <span class="card-badge badge-free">Open Source</span>
+                                </div>
+                                <a target="_blank" href="https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.1.4/npp.8.1.4.Installer.exe" class="card-title">Notepad++</a>
+                                <p class="card-desc">Source code editor gratis dan populer dengan dukungan syntax highlighting beragam bahasa pemrograman.</p>
+                                <div class="card-tags">
+                                    <span class="tag-chip">Free & Open Source</span>
+                                    <span class="tag-chip">Syntax Highlight</span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.1.4/npp.8.1.4.Installer.exe" class="card-action">
+                                <span>Download Notepad++</span>
+                                <i class="fa-solid fa-download"></i>
+                            </a>
+                        </div>
 
-                <p><a target="blank"
-                        href="https://sourceforge.net/projects/winscp/files/WinSCP/5.19.2/WinSCP-5.19.2-Setup.exe/download">WinSCP</a>-
-                    is a free SFTP, SCP, Amazon S3, WebDAV, and FTP client for Windows.</p>
+                        <!-- VS Code -->
+                        <div class="card-item" data-title="Microsoft Visual Studio Code vscode editor web cloud">
+                            <div>
+                                <div class="card-top">
+                                    <div class="card-icon" style="color: #0284c7;"><i class="fa-solid fa-code-compare"></i></div>
+                                    <span class="card-badge badge-featured">Popular</span>
+                                </div>
+                                <a target="_blank" href="https://code.visualstudio.com/download" class="card-title">Visual Studio Code</a>
+                                <p class="card-desc">Code editor modern besutan Microsoft dengan ekosistem ekstensi terlengkap untuk web development.</p>
+                                <div class="card-tags">
+                                    <span class="tag-chip">Rich Extensions</span>
+                                    <span class="tag-chip">Modern IDE</span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://code.visualstudio.com/download" class="card-action">
+                                <span>Download VS Code</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
 
-                <p><a target="blank" href="https://filezilla-project.org/download.php">FileZilla </a>- is a free-to-use
-                    (open source) FTP utility, allowing a user to transfer files from a local computer to a remote
-                    computer.</p>
+                        <!-- Code Editor Android -->
+                        <div class="card-item" data-title="Code Editor - Compiler & IDE Android smartphone mobile">
+                            <div>
+                                <div class="card-top">
+                                    <div class="card-icon" style="color: #10b981;"><i class="fa-brands fa-android"></i></div>
+                                    <span class="card-badge badge-tool">Android</span>
+                                </div>
+                                <a target="_blank" href="https://play.google.com/store/apps/details?id=com.rhmsoft.code" class="card-title">Code Editor IDE (Android)</a>
+                                <p class="card-desc">Aplikasi edit kode praktis di Android dengan auto indention, syntax highlighting, dan code assist.</p>
+                                <div class="card-tags">
+                                    <span class="tag-chip">Google Play</span>
+                                    <span class="tag-chip">Mobile Editor</span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.rhmsoft.code" class="card-action">
+                                <span>Buka di Play Store</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
 
-                <h3><i class="fa-solid fa-hashtag"></i> SHARE THIS PAGE WITH YOUR FIREND</h3>
+                        <!-- Code Editor iPhone -->
+                        <div class="card-item" data-title="Code Editor - Compiler IDE Iphone iOS apple mobile">
+                            <div>
+                                <div class="card-top">
+                                    <div class="card-icon"><i class="fa-brands fa-apple"></i></div>
+                                    <span class="card-badge badge-tool">iOS</span>
+                                </div>
+                                <a target="_blank" href="https://apps.apple.com/us/app/code-editor-compiler-ide/id1581290510" class="card-title">Code Editor IDE (iPhone)</a>
+                                <p class="card-desc">Editor kode optimal untuk editing file login page langsung dari perangkat iPhone & iPad.</p>
+                                <div class="card-tags">
+                                    <span class="tag-chip">App Store</span>
+                                    <span class="tag-chip">iOS Coding</span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://apps.apple.com/us/app/code-editor-compiler-ide/id1581290510" class="card-action">
+                                <span>Buka di App Store</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-                <div class="share">
-                    <ul>
-                        <li><a target="_blank"
-                                href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Filhamuddinsirait.github.io%2F&amp;src=sdkpreparse"><i
-                                    class="fa-brands fa-facebook"></i></a></li>
-                        <li><a target="_blank" href="https://twitter.com/share?ref_src=twsrc%5Etfw"><i
-                                    class="fa-brands fa-twitter"></i></a></li>
-                    </ul>
+                <!-- FTP Tools Section -->
+                <div class="section-group" data-category="ftp">
+                    <div class="section-header">
+                        <div class="section-title">
+                            <span class="section-icon-badge"><i class="fa-solid fa-network-wired"></i></span>
+                            <span>Software FTP Tools (Upload Template ke Router)</span>
+                        </div>
+                        <span class="section-count-badge">2 Tools</span>
+                    </div>
+
+                    <div class="cards-grid">
+                        <!-- WinSCP -->
+                        <div class="card-item" data-title="WinSCP free sftp scp ftp client windows upload file mikrotik">
+                            <div>
+                                <div class="card-top">
+                                    <div class="card-icon" style="color: #0284c7;"><i class="fa-solid fa-folder-arrow-up"></i></div>
+                                    <span class="card-badge badge-tool">SFTP / FTP</span>
+                                </div>
+                                <a target="_blank" href="https://sourceforge.net/projects/winscp/files/WinSCP/5.19.2/WinSCP-5.19.2-Setup.exe/download" class="card-title">WinSCP Client</a>
+                                <p class="card-desc">Klien SFTP dan FTP gratis untuk Windows, mempermudah upload folder template hotspot ke file storage MikroTik.</p>
+                                <div class="card-tags">
+                                    <span class="tag-chip">SFTP</span>
+                                    <span class="tag-chip">SCP</span>
+                                    <span class="tag-chip">FTP</span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://sourceforge.net/projects/winscp/files/WinSCP/5.19.2/WinSCP-5.19.2-Setup.exe/download" class="card-action">
+                                <span>Download WinSCP Setup</span>
+                                <i class="fa-solid fa-download"></i>
+                            </a>
+                        </div>
+
+                        <!-- FileZilla -->
+                        <div class="card-item" data-title="FileZilla free open source ftp utility transfer files">
+                            <div>
+                                <div class="card-top">
+                                    <div class="card-icon" style="color: #ff2200;"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+                                    <span class="card-badge badge-free">Open Source</span>
+                                </div>
+                                <a target="_blank" href="https://filezilla-project.org/download.php" class="card-title">FileZilla FTP Client</a>
+                                <p class="card-desc">Software open source lintas platform untuk transfer file cepat antara komputer dan server/router MikroTik.</p>
+                                <div class="card-tags">
+                                    <span class="tag-chip">Multi-Platform</span>
+                                    <span class="tag-chip">Fast Transfer</span>
+                                </div>
+                            </div>
+                            <a target="_blank" href="https://filezilla-project.org/download.php" class="card-action">
+                                <span>Download FileZilla</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Empty State Message when searching -->
+                <div id="emptySearchState" class="empty-search-state">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <p>Tidak ada hasil yang cocok dengan pencarian Anda.</p>
+                </div>
+
+                <!-- Share Box -->
+                <div class="share-section-box">
+                    <div class="share-title">
+                        <i class="fa-solid fa-share-nodes"></i>
+                        <span>Bagikan Laman Ini Kepada Teman & Komunitas</span>
+                    </div>
+                    <div class="share-buttons-group">
+                        <a class="btn-share-pill fb" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Filhamuddinsirait.github.io%2F&amp;src=sdkpreparse" title="Share ke Facebook">
+                            <i class="fa-brands fa-facebook"></i> Facebook
+                        </a>
+                        <a class="btn-share-pill tw" target="_blank" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Filhamuddinsirait.github.io%2F&text=Free%20Hotspot%20Template%20for%20Mikrotik" title="Share ke Twitter/X">
+                            <i class="fa-brands fa-x-twitter"></i> Twitter/X
+                        </a>
+                        <a class="btn-share-pill wa" target="_blank" href="https://api.whatsapp.com/send?text=Free%20Hotspot%20Template%20for%20Mikrotik%20https%3A%2F%2Filhamuddinsirait.github.io%2F" title="Share ke WhatsApp">
+                            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <button class="btn-share-pill copy" id="copyPageLink" title="Salin Link Halaman">
+                            <i class="fa-solid fa-link"></i> Salin Link
+                        </button>
+                    </div>
                 </div>
 
             </div>
+
+            <!-- Footer -->
             <footer>
-                <h4><i class="fa-regular fa-copyright"></i> Copyright 2022 <a
-                        href="https://www.facebook.com/i.sirait93">Ilhamuddin Sirait</a> - Design with <i
-                        class="fa-solid fa-heart"></i> By <a href="https://www.facebook.com/i.sirait93">isirait93</a>
+                <h4>
+                    <i class="fa-regular fa-copyright"></i> Copyright 2022 - 2026 
+                    <a href="https://www.facebook.com/i.sirait93" target="_blank">Ilhamuddin Sirait</a> 
+                    &bull; Designed with <i class="fa-solid fa-heart"></i> By 
+                    <a href="https://www.facebook.com/i.sirait93" target="_blank">isirait93</a>
                 </h4>
+
                 <div class="hits">
-                    <a href="https://hits.seeyoufarm.com"><img
-                            src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Filhamuddinsirait.github.io&count_bg=%23FF9900&title_bg=%23555555&icon=&icon_color=%23FF9900&title=hits&edge_flat=false"
-                            alt="SeeYourFarm" /></a>
+                    <a href="https://hits.seeyoufarm.com" target="_blank" rel="noopener">
+                        <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Filhamuddinsirait.github.io&count_bg=%23FF9900&title_bg=%23555555&icon=&icon_color=%23FF9900&title=hits&edge_flat=false" alt="Total Hits Visitor" />
+                    </a>
                 </div>
+
                 <div class="socmed">
                     <ul>
-                        <li><a target="_blank" href="https://www.facebook.com/i.sirait93"><i
-                                    class="fa-brands fa-facebook"></i></a></li>
-                        <li><a target="_blank" href="https://www.instagram.com/i.sirait93"><i
-                                    class="fa-brands fa-instagram"></i></a></li>
-                        <li><a target="_blank" href="https://www.youtube.com/ilhamuddinsiraittutorial"><i
-                                    class="fa-brands fa-youtube"></i></a></li>
-                        <li><a target="_blank" href="https://www.tiktok.com/@ilhamsirait93"><i
-                                    class="fa-brands fa-tiktok"></i></a></li>
-                        <li><a target="_blank" href="https://www.twitter.com/ilmansrtjr"><i
-                                    class="fa-brands fa-twitter"></i></a></li>
-                        <li><a target="_blank" href=""><i class="fa-brands fa-github"></i></a></li>
+                        <li><a target="_blank" href="https://www.facebook.com/i.sirait93" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a target="_blank" href="https://www.instagram.com/i.sirait93" title="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a target="_blank" href="https://www.youtube.com/ilhamuddinsiraittutorial" title="YouTube"><i class="fa-brands fa-youtube"></i></a></li>
+                        <li><a target="_blank" href="https://www.tiktok.com/@ilhamsirait93" title="TikTok"><i class="fa-brands fa-tiktok"></i></a></li>
+                        <li><a target="_blank" href="https://www.twitter.com/ilmansrtjr" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                        <li><a target="_blank" href="https://github.com/ilhamuddinsirait" title="GitHub"><i class="fa-brands fa-github"></i></a></li>
                     </ul>
                 </div>
             </footer>
         </main>
-
     </div>
+
+    <!-- Toast message for copy link -->
+    <div id="copyToast" class="copy-toast">
+        <i class="fa-solid fa-circle-check" style="color: #10b981;"></i> Link berhasil disalin ke clipboard!
+    </div>
+
+    <!-- Interactive script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const searchInput = document.getElementById('searchInput');
+            const clearSearch = document.getElementById('clearSearch');
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const cardItems = document.querySelectorAll('.card-item');
+            const sectionGroups = document.querySelectorAll('.section-group');
+            const emptyState = document.getElementById('emptySearchState');
+            const copyBtn = document.getElementById('copyPageLink');
+            const copyToast = document.getElementById('copyToast');
+
+            let currentFilter = 'all';
+
+            function filterItems() {
+                const query = searchInput.value.toLowerCase().trim();
+                clearSearch.style.display = query ? 'block' : 'none';
+
+                let totalVisible = 0;
+
+                sectionGroups.forEach(group => {
+                    const groupCategory = group.getAttribute('data-category');
+                    const categoryMatch = (currentFilter === 'all' || currentFilter === groupCategory);
+                    let visibleInGroup = 0;
+
+                    const cards = group.querySelectorAll('.card-item');
+                    cards.forEach(card => {
+                        const titleText = (card.getAttribute('data-title') || '').toLowerCase();
+                        const cardText = card.textContent.toLowerCase();
+                        const matchesQuery = !query || titleText.includes(query) || cardText.includes(query);
+
+                        if (categoryMatch && matchesQuery) {
+                            card.style.display = 'flex';
+                            visibleInGroup++;
+                            totalVisible++;
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+
+                    // Hide whole section if no cards match
+                    group.style.display = visibleInGroup > 0 ? 'block' : 'none';
+                });
+
+                emptyState.style.display = totalVisible === 0 ? 'block' : 'none';
+            }
+
+            searchInput.addEventListener('input', filterItems);
+
+            clearSearch.addEventListener('click', function () {
+                searchInput.value = '';
+                filterItems();
+                searchInput.focus();
+            });
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    currentFilter = this.getAttribute('data-filter');
+                    filterItems();
+                });
+            });
+
+            // Copy Link
+            if (copyBtn) {
+                copyBtn.addEventListener('click', function () {
+                    navigator.clipboard.writeText(window.location.href).then(() => {
+                        copyToast.classList.add('show');
+                        setTimeout(() => {
+                            copyToast.classList.remove('show');
+                        }, 2500);
+                    }).catch(() => {
+                        alert('Link: ' + window.location.href);
+                    });
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
